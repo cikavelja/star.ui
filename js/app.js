@@ -142,27 +142,19 @@
     };
 
 
-    // bodyData.mainPage.links.forEach(function (index) {
-    //     $("#ulLinks").append('<li class="nav-item"><a class="nav-link" href="#' + index.href + '">' + index.name + '</a></li>');
-    //     '<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>'
-    // });
+    bodyData.mainPage.links.forEach(function (index) {
+        $("#ulLinks").append('<li class="nav-item"><a class="nav-link" href="#' + index.href + '">' + index.name + '</a></li>');
+        '<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>'
+    });
 
-    // let dynamicServiceBody = "";
-    // $("#servicesSectionRow").empty();
-    // bodyData.mainPage.sections.sectionList.forEach(function (index) {
-    //     dynamicServiceBody += '<div class="col-md-4"> <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i></span><h4 class="my-3">' + index.title + '</h4><p class="fw-bolder">' + index.description + '</p></div>';
-    // });
-    // $("#servicesSectionRow").html(dynamicServiceBody);
-
-
-    $("#btnAddService").click(function(){
+    // $("#btnAddService").click(function(){
         $("#servicesSectionRow").empty();
         bodyData.mainPage.sections.sectionList.forEach(function( index ) {
             $("#servicesSectionRow").append('<div class="col-md-4" id="servicesSectionItem_'+index.id+'" > <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i></span><h4 class="my-3">'+index.title+'</h4><p class="fw-bolder">'+index.description+'</p></div>');
         });
-    });
+    // });
     
-    $("#btnAddService").click(function(){
+    // $("#btnAddService").click(function(){
         $("#timelineList").empty();
         bodyData.mainPage.about.sectionList.forEach(function( index ) {
             if(index.inverted){
@@ -176,7 +168,9 @@
                 $("#timelineList").append('<li><div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..."></div><div class="timeline-panel"><div class="timeline-heading"><h4>2009-2011</h4><h4 class="subheading">Our Humble Beginnings</h4></div><div class="timeline-body"><p class="fw-bolder">consectetur!</p></div></div></li>');
             };
         });
-    });
+    // });
+
+    
     // let viewModel = {
     //     apiData: ko.observable(bodyData),
     //     firstName: "Bart"
